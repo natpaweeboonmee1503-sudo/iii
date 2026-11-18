@@ -1,0 +1,302 @@
+
+/* ตั้งค่าพื้นฐาน */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f7fc;
+    color: #222;
+}
+
+/* เมนูเว็บไซต์ */
+header {
+    background: #071b3a;
+    padding: 20px 8%;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: #00c3ff;
+    font-size: 25px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: #00c3ff;
+}
+
+/* หน้าแรก */
+.hero {
+    min-height: 500px;
+    background: linear-gradient(
+        135deg, #071b3a, #0755a5, #00a6d6
+    );
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    color: white;
+    padding: 50px 8%;
+    gap: 40px;
+}
+
+.hero-content {
+    flex: 1;
+}
+
+.hero-content h1 {
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
+.hero-content h2 {
+    color: #00e0ff;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 18px;
+    line-height: 2;
+    margin-bottom: 35px;
+}
+
+.btn {
+    display: inline-block;
+    background: #00c3ff;
+    color: #071b3a;
+    padding: 13px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background: white;
+}
+
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.hero-image img {
+    width: 100%;
+    max-width: 380px;
+    height: 420px;
+    object-fit: cover;
+    object-position: center top;
+    border-radius: 20px;
+    border: 5px solid white;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+/* เกี่ยวกับแผนก */
+.about {
+    padding: 80px 15%;
+    text-align: center;
+    background: white;
+}
+
+.about h2,
+.study h2,
+.teacher h2,
+.contact h2 {
+    font-size: 30px;
+    color: #0755a5;
+    margin-bottom: 25px;
+}
+
+.about p {
+    font-size: 18px;
+    line-height: 2;
+}
+
+/* การเรียน */
+.study {
+    padding: 80px 8%;
+    text-align: center;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.card {
+    background: white;
+    padding: 30px 20px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.emoji {
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+.card h3 {
+    color: #0755a5;
+    margin-bottom: 15px;
+}
+
+.card p {
+    line-height: 1.7;
+}
+
+/* บุคลากร */
+.teacher {
+    padding: 70px 8%;
+    text-align: center;
+    background: white;
+}
+
+/* จัดรูปครู 3 รูปเรียงแนวนอน */
+.teacher-container {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 35px;
+}
+
+/* กล่องรูปครู */
+.teacher-card {
+    width: 300px;
+    padding: 20px;
+    background: #f4f7fc;
+    border-radius: 20px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.teacher-card:hover {
+    transform: translateY(-8px);
+}
+
+/* รูปภาพครู */
+.teacher-card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    object-position: center top;
+    border-radius: 15px;
+    margin-bottom: 20px;
+}
+
+.teacher-card h3 {
+    color: #0755a5;
+    margin-bottom: 12px;
+}
+
+.teacher-card p {
+    line-height: 1.8;
+    color: #555;
+}
+
+/* ติดต่อ */
+.contact {
+    background: #071b3a;
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+    line-height: 2;
+}
+
+.contact h2 {
+    color: #00c3ff;
+}
+
+/* ท้ายเว็บไซต์ */
+footer {
+    background: #041126;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+/* รองรับมือถือและแท็บเล็ต */
+@media (max-width: 768px) {
+
+    nav {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-content h1 {
+        font-size: 28px;
+    }
+
+    .hero-image img {
+        height: 350px;
+    }
+
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .teacher-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .teacher-card {
+        width: 100%;
+        max-width: 350px;
+    }
+}
+
+/* รองรับมือถือจอเล็ก */
+@media (max-width: 480px) {
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-content h1 {
+        font-size: 25px;
+    }
+
+    .about {
+        padding: 50px 8%;
+    }
+}
